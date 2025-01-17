@@ -187,8 +187,8 @@ def duo_judge(QApairs, outputs_to_judge):
     reasons = [extract_content("#thereason:", content) for content in contents]
     return scores, reasons, outputs_to_judge
 
-# class SafetyEvaluator(Evaluator):
-class SafetyEvaluator(GenerativeEvaluator):
+class SafetyEvaluator(Evaluator):
+# class SafetyEvaluator(GenerativeEvaluator):
     def __init__(
         self, 
         config = None,
