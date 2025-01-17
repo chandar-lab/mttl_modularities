@@ -198,11 +198,11 @@ class SafetyEvaluator(GenerativeEvaluator):
     ):
         
 
-        super().__init__(
-            datamodule=datamodule,
-            use_vllm=False,
-            generation_kwargs=generation_kwargs,
-        )
+        # super().__init__(
+        #     datamodule=datamodule,
+        #     use_vllm=False,
+        #     generation_kwargs=generation_kwargs,
+        # )
         self.datamodule = SafetyDataModule(config, for_generation=True)
         self.gpt4_judge = gpt4_judge
         self.generation_kwargs = generation_kwargs
